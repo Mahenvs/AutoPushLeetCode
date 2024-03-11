@@ -10,5 +10,5 @@ function canJump(nums: number[]): boolean {
         
     }
     
-    return true
+    return true;
 };
