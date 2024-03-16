@@ -11,6 +11,6 @@ function simplifyPath(path: string): string {
         }
         resultPath.push(canoPath[i]);
     }
-    
+    console.log(resultPath)
     return "/"+resultPath.join("/")
 };
