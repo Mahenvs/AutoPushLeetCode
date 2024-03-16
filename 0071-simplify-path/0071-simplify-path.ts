@@ -1,16 +1,16 @@
 function simplifyPath(path: string): string {
     
-const pathArr: string[] = path.split("/");
-  const conicalPathArr: string[] = [];
-  
-  for (const dir of pathArr) {
-    if (dir == "." || dir == "") 
-        continue;
-    if(dir == "..") {conicalPathArr.pop();
-       continue;}    
-    conicalPathArr.push(dir);
-  }
-  
-  return "/" + conicalPathArr.join("/");
-
+    const canoPath : string[] = path.split('/');
+    console.log(canoPath);
+    const resultPath: string[] = []
+    for(let i=0;i< canoPath.length; i++){
+        if(canoPath[i] == "." || canoPath[i] == ""  ) continue;
+        else if(canoPath[i] == ".." ){
+            resultPath.pop();
+            continue;
+        }
+        resultPath.push(canoPath[i]);
+    }
+    
+    return "/"+resultPath.join("/")
 };
